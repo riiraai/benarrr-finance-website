@@ -204,12 +204,22 @@
             <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between gap-[70px]">
                 <div class="flex-1 grid grid-cols-3 gap-[15px]">
                     <figure class="col-span-3 relative">
-                        <img
-                            class="absolute -top-2 md:-top-6 left-2 md:left-6 w-full h-[450px] object-cover border-[3px] border-rich-black rounded-lg"
-                            src="./assets/images/showcases/showcase_1.png" alt="Showcase Image 1">
-                        <div
-                            class="bg-[linear-gradient(111.82deg,#AC7FFA_54.23%,#F59765_68.14%,#75F1F1_105.05%)] w-full h-[450px] rounded-lg">
+                        <div class="absolute -top-2 md:-top-6 left-2 md:left-6 w-full">
+                            <img
+                                class="w-full h-[450px] object-cover border-[3px] border-rich-black rounded-lg"
+                                src="./assets/images/showcases/showcase_1.png"
+                                alt="Showcase Image 1"
+                            >
+                            <button
+                                title="Play Video"
+                                class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 border-[10px] border-white border-opacity-30 rounded-[100%] overflow-hidden"
+                            >
+                                <div class="bg-primary size-20 flex items-center justify-center">
+                                    <img width="24" src="./assets/icons/play.svg" alt="Icon Play">
+                                </div>
+                            </button>
                         </div>
+                        <div class="bg-[linear-gradient(111.82deg,#AC7FFA_54.23%,#F59765_68.14%,#75F1F1_105.05%)] w-full h-[450px] rounded-lg"></div>
                     </figure>
 
                     <figure class="h-[130px] rounded-lg overflow-hidden border-[3px] border-rich-black">
