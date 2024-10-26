@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'class-display-semibold': ['ClashDisplay-Semibold', 'sans-serif'],
+                    },
+                    fontSize: {
+                        'xs': '14px',
+                        'sm': '16px', // p
+                        'md': '18px', // p
+                        'base': '20px', //h4
+                        'lg': '22px', // h3
+                        'xl': '36px', // h2
+                        '2xl': '65px', // h1
+                    },
+                    backgroundColor: {
+                        primary: '#5313CA',
+                        secondary: '#FF9736',
+                        'secondary-white': '#F3F0F8',
+                        'rich-black': '#050729',
+                        electricBlue: '#75F1F1',
+                        gray: '#EDEEF2',
+                    },
+                    colors: {
+                        primary: '#5313CA',
+                        secondary: '#FF9736',
+                        'rich-black': '#050729',
+                        gray: '#989AAE',
+                        electricBlue: '#75F1F1',
+                    },
+                    borderColor: {
+                        'gray-100': '#EEEFFA',
+                    },
+                    boxShadow: {
+                        base: '0px 0px 50px -2px rgba(5, 7, 41, 0.11)'
+                    },
+                    borderRadius: {
+                        'base': '12px',
+                        'md': '16px',
+                        'lg': '26px',
+                        'full': '50px',
+                    },
+                    animation: {
+                        'marquee': 'marquee 15s linear infinite alternate'
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    },
+                    media: {
+                        'xxl': '1440px',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="container mx-auto px-4 min-h-[52px] h-[52px] mt-[30px] flex items-center justify-between">
+        <img src="./assets/logo/logo.svg" alt="Brand Application Logo benaar">
+        <nav class="flex flex-none md:flex-1 items-center justify-between">
+            <ul class="hidden md:flex gap-[40px] mx-auto [&_li>a]:text-sm [&_li:is(.active)>a]:font-bold">
+                <li class="active"><a href='#'>Home</a></li>
+                <li><a href='#features'>Features</a></li>
+                <li><a href='#showcase'>Showcase</a></li>
+                <li><a href='#pricing'>Pricing</a></li>
+                <li><a href='#testimonial'>Testimonial</a></li>
+            </ul>
+            <a href="#" class="px-[22px] py-[14px] bg-rich-black text-white rounded-base">Sign In</a>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="container mx-auto px-4 mt-[70px] flex flex-col md:flex-row justify-between items-center gap-[85px] md:gap-0">
+            <div class="basis-1/2 text-rich-black flex flex-col gap-[30px]">
+                <div class="bg-secondary-white flex items-center gap-[10px] px-[22px] py-[10px] w-fit rounded-full">
+                    <img src="./assets/icons/vuesax/linear/cup.svg" alt="Cup Icon">
+                    <p class="font-bold text-xs">
+                        <span class="text-primary">12,000</span> top freelancers signed up last week
+                    </p>
+                </div>
+                <h1 class="text-2xl font-class-display-semibold leading-tight">Clients Analytics for Freelancer</h1>
+                <p class="text-md">Learn how to track the hot prospects to bring more fortune while freelancing from home or your favorite cafes.</p>
+                <div class="flex items-center gap-[14px] [&_a]:px-[28px] [&_a]:py-[20px] [&_a]:rounded-base">
+                    <a href="#" class="px-[22px] py-[14px] bg-primary text-white rounded-base">Explore Features</a>
+                    <a href="#" class="px-[22px] py-[14px] bg-rich-black text-white rounded-base">
+                        <img class="inline align-top" src="./assets/icons/video-circle.svg"
+                            alt="Video Circle Icon">&nbsp;Watch Video
+                    </a>
+                </div>
+            </div>
+            <figure>
+                <img width="510" height="560" src="./assets/images/hero_illustration.png" alt="Hero Ilustration">
+            </figure>
+        </section>
+        <section id="brands"
+            class="container mx-auto px-4 mt-[50px] mb-[70px] flex flex-col items-center justify-center gap-[30px] overflow-hidden">
+            <h3 class="text-lg font-semibold">Basic
+                Over&puncsp;<span class="font-bold text-primary">280,000</span>&puncsp;big companies<br />trust Benarrr for their
+                <span class="font-bold text-primary">businesses.</span>
+            </h3>
+            <ul class="animate-marquee flex gap-[70px]">
+                <li><img class="h-[34px]" src="./assets/logo/brands/logo-1.png" alt="Logo of Brand 1"></li>
+                <li><img class="h-[34px]" src="./assets/logo/brands/logo-2.png" alt="Logo of Brand 2"></li>
+                <li><img class="h-[34px]" src="./assets/logo/brands/logo-3.png" alt="Logo of Brand 3"></li>
+                <li><img class="h-[34px]" src="./assets/logo/brands/logo-4.png" alt="Logo of Brand 4"></li>
+            </ul>
+        </section>
+        <section id="features" class="bg-gray py-[70px]">
+            <div class="container mx-auto px-4 flex flex-col gap-[30px]">
+                <div class="bg-primary text-white px-[22px] py-[10px] w-fit rounded-full">
+                    Top Features
+                </div>
+                <h2 class="text-xl font-bold">Built-in Robust Features<br />Versatile Purposes</h2>
+                <div class="grid grid-cols-12 gap-[30px]">
+                    <article
+                        class="col-span-full md:col-span-4 flex flex-col bg-white h-[350px] w-full p-[30px] rounded-md shadow-base">
+                        <div class="relative w-fit">
+                            <img class="relative z-[1]" width="70" height="70"
+                                src="./assets/icons/vuesax/linear/global-search.svg" alt="Real Tracking Icon">
+                            <div class="absolute top-1/2 -translate-y-1/2 right-0 size-10 bg-electricBlue rounded-full">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mt-auto">
+                            <h3 class="text-lg font-bold">Real Tracking</h3>
+                            <p class="text-md text-gray">Get the clients behavior faster and accurate by a few of
+                                clicks.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="col-span-full md:col-span-4 flex flex-col bg-white h-[350px] w-full p-[30px] rounded-md shadow-base">
+                        <div class="relative w-fit">
+                            <img class="relative z-[1]" width="70" height="70"
+                                src="./assets/icons/vuesax/linear/device-message.svg" alt="Email Marketing Icon">
+                            <div class="absolute top-1/2 -translate-y-1/2 right-0 size-10 bg-electricBlue rounded-full">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mt-auto">
+                            <h3 class="text-lg font-bold">Email Marketing</h3>
+                            <p class="text-md text-gray">Send a couple of templates A/B testing to encourage clients</p>
+                        </div>
+                    </article>
+                    <article
+                        class="col-span-full md:col-span-4 flex flex-col bg-white h-[350px] w-full p-[30px] rounded-md shadow-base">
+                        <div class="relative w-fit">
+                            <img class="relative z-[1]" width="70" height="70"
+                                src="./assets/icons/vuesax/linear/bill.svg" alt="Payment Gateway Icon">
+                            <div class="absolute top-1/2 -translate-y-1/2 right-0 size-10 bg-electricBlue rounded-full">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mt-auto">
+                            <h3 class="text-lg font-bold">Payment Gateway</h3>
+                            <p class="text-md text-gray">Clients would send the money to your bank account, secured.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="col-span-full md:col-span-6 flex flex-col bg-white h-[350px] w-full p-[30px] rounded-md shadow-base">
+                        <div class="relative w-fit">
+                            <img class="relative z-[1]" width="70" height="70"
+                                src="./assets/icons/vuesax/linear/security-card.svg" alt="Avoid Client Fraud Icon">
+                            <div class="absolute top-1/2 -translate-y-1/2 right-0 size-10 bg-electricBlue rounded-full">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mt-auto">
+                            <h3 class="text-lg font-bold">Avoid Client Fraud</h3>
+                            <p class="text-md text-gray">Our AI technologies can prevent client to steal your final
+                                income from each project you worked.</p>
+                        </div>
+                    </article>
+                    <article
+                        class="col-span-full md:col-span-6 flex flex-col bg-white h-[350px] w-full p-[30px] rounded-md shadow-base">
+                        <div class="relative w-fit">
+                            <img class="relative z-[1]" width="70" height="70"
+                                src="./assets/icons/vuesax/linear/bezier.svg" alt="More Automations Icon">
+                            <div class="absolute top-1/2 -translate-y-1/2 right-0 size-10 bg-electricBlue rounded-full">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-[10px] mt-auto">
+                            <h3 class="text-lg font-bold">More Automations</h3>
+                            <p class="text-md text-gray">Our system will notify clients regarding deadline payment,
+                                repetition orders, and many more.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="showcase" class="pt-24 pb-[70px]">
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between gap-[70px]">
+                <div class="flex-1 grid grid-cols-3 gap-[15px]">
+                    <figure class="col-span-3 relative">
+                        <img
+                            class="absolute -top-2 md:-top-6 left-2 md:left-6 w-full h-[450px] object-cover border-[3px] border-rich-black rounded-lg"
+                            src="./assets/images/showcases/showcase_1.png" alt="Showcase Image 1">
+                        <div
+                            class="bg-[linear-gradient(111.82deg,#AC7FFA_54.23%,#F59765_68.14%,#75F1F1_105.05%)] w-full h-[450px] rounded-lg">
+                        </div>
+                    </figure>
+
+                    <figure class="h-[130px] rounded-lg overflow-hidden border-[3px] border-rich-black">
+                        <img class="relative object-cover w-full h-full" src="./assets/images/showcases/showcase_2.png"
+                            alt="Showcase Image 2">
+                    </figure>
+
+                    <figure class="h-[130px] rounded-lg overflow-hidden border-[3px] border-rich-black">
+                        <img class="relative object-cover w-full h-full" src="./assets/images/showcases/showcase_3.png"
+                            alt="Showcase Image 3">
+                    </figure>
+
+                    <figure class="h-[130px] rounded-lg overflow-hidden border-[3px] border-rich-black">
+                        <img class="relative object-cover w-full h-full" src="./assets/images/showcases/showcase_4.png"
+                            alt="Showcase Image 4">
+                    </figure>
+                </div>
+
+                <div class="basis-[42%] text-rich-black flex flex-col gap-[40px]">
+                    <div class="bg-secondary text-white px-[22px] py-[10px] w-fit rounded-full">
+                        <p class="font-bold text-xs">
+                            Built For Winners
+                        </p>
+                    </div>
+                    <div class="space-y-2 5">
+                        <h2 class="text-xl font-bold">Watch How It Works</h2>
+                        <p class="text-md">We designed a lot of features that can applied automatically so you do not
+                            have to run.</p>
+                    </div>
+                    <ul class="flex flex-col gap-5">
+                        <li class="flex items-center gap-3">
+                            <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                            </div>
+                            <p class="text-md font-semibold">Auto running when reaches certain number</p>
+                        </li>
+                        <li class="flex items center gap-3">
+                            <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                            </div>
+                            <p class="text-md font-semibold">Calling backup when you overwhelmed</p>
+                        </li>
+                        <li class="flex items center gap-3">
+                            <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                            </div>
+                            <p class="text-md font-semibold">Sending invoices to client completed projects</p>
+                        </li>
+                        <li class="flex items center gap-3">
+                            <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                            </div>
+                            <p class="text-md font-semibold">Turn off tracker when the client not agree</p>
+                        </li>
+                        <li class="flex items center gap-3">
+                            <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                            </div>
+                            <p class="text-md font-semibold">More great features coming soon</p>
+                        </li>
+                    </ul>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-5">
+                        <a href="#" class="px-[22px] py-[14px] bg-primary text-white rounded-base">Get Free Trial</a>
+                        <figure class="flex items-center gap-[6px]">
+                            <ul class="-space-x-3 [&_li]:inline-block">
+                                <li>
+                                    <img class="size-[30px] rounded-full ring-2 ring-white"
+                                        src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                        alt="User 1">
+                                </li>
+                                <li>
+                                    <img class="size-[30px] rounded-full ring-2 ring-white"
+                                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                        alt="User 2">
+                                </li>
+                                <li>
+                                    <img class="size-[30px] rounded-full ring-2 ring-white"
+                                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                                        alt="User 3">
+                                </li>
+                            </ul>
+                            <figcaption class="text-md">
+                                <span class="font-bold">992</span>
+                                people just signed up
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="bg-gray py-[70px]">
+            <div class="container mx-auto px-4 flex flex-col lg:flex-row justify-between gap-[30px]">
+                <div class="basis-[430px] text-rich-black flex flex-col gap-[30px]">
+                    <div class="bg-electricBlue text-rich-black px-[22px] py-[10px] w-fit rounded-full">
+                        <p class="font-bold text-xs">
+                            Built For Winners
+                        </p>
+                    </div>
+                    <h2 class="text-xl font-bold">Most Friendly Pricing Plans For Everyone</h2>
+                    <p class="text-md">We designed a lot of features that can applied automatically so you do not have to run.</p>
+                    <ul class="flex flex-wrap w-full gap-[30px]">
+                        <li><img class="h-[35px]" src="./assets/logo/brands/logo-1.png" alt="Logo of Brand 1"></li>
+                        <li><img class="h-[35px]" src="./assets/logo/brands/logo-2.png" alt="Logo of Brand 2"></li>
+                        <li><img class="h-[35px]" src="./assets/logo/brands/logo-3.png" alt="Logo of Brand 3"></li>
+                        <li><img class="h-[35px]" src="./assets/logo/brands/logo-4.png" alt="Logo of Brand 4"></li>
+                    </ul>
+                </div>
+                <div class="flex-1 flex-shrink grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <article class="bg-white p-5 rounded-lg flex flex-col gap-5 h-fit">
+                        <header class="flex flex-col">
+                            <h4 class="text-base font-bold">Basic</h4>
+                            <h2 class="text-xl font-bold">$4,999<sub class="text-gray text-sm font-medium">/month</sub>
+                        </header>
+                    
+                        <p class="text-gray text-md">
+                            Good for freelancer having 5-15 clients per month about twice.
+                        </p>
+                    
+                        <ul class="flex flex-col gap-5">
+                            <li class="flex items-center gap-3">
+                                <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">Real tracking behavior</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">100 GB file-size documents</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">24/7 customer support</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">Quick invoicing modules</p>
+                            </li>
+                        </ul>
+                        <a href="#" class="px-[22px] py-[14px] bg-rich-black text-center text-white rounded-base">Get Started</a>
+                    </article>
+                    <article class="bg-white p-5 rounded-lg flex flex-col gap-5 h-fit">
+                        <header class="flex flex-col">
+                            <h4 class="text-base font-bold">For Team</h4>
+                            <h2 class="text-xl font-bold">$18,500<sub class="text-gray text-sm font-medium">/month</sub>
+                        </header>
+                    
+                        <p class="text-gray text-md">
+                            Good for teams having 30 clients per month about twice.
+                        </p>
+                    
+                        <ul class="flex flex-col gap-5">
+                            <li class="flex items-center gap-3">
+                                <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">Real tracking behavior</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">100 GB file-size documents</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">24/7 customer support</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-secondary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">Quick invoicing modules</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-primary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">Anti fraud payments</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-primary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">Legal support backed</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-primary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">LMS for demo features</p>
+                            </li>
+                            <li class="flex items center gap-3">
+                                <div class="bg-primary size-[30px] rounded-full flex items-center justify-center">
+                                    <img width="15" height="11" src="./assets/icons/check.svg" alt="Monitor Icon">
+                                </div>
+                                <p class="text-md font-semibold">More coming soon</p>
+                            </li>
+                        </ul>
+                        <a href="#" class="px-[22px] py-[14px] bg-primary text-center text-white rounded-base">Get Started</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="testimonial" class="py-[70px]">
+            <div class="container mx-auto px-4 flex flex-col items-center gap-[50px]">
+                <div class="space-y-[30px]">
+                    <div class="bg-primary text-white px-[22px] py-[10px] w-fit rounded-full mx-auto">
+                        <p class="font-bold text-xs">
+                            Success Customers
+                        </p>
+                    </div>
+                    <h2 class="text-xl font-bold text-center">Listen What They&OpenCurlyQuote;re <br/>Saying About Benarrr</h2>
+                </div>
+                <div class="grid grid-cols-12">
+                    <article
+                        class="col-span-full md:col-span-4 flex flex-col justify-between bg-white h-[350px] w-full p-[30px] rounded-md shadow-base">
+                        <div class="rounded-[100%] size-[70px] overflow-hidden">
+                            <img class="object-cover" width="70" height="70" src="./assets/images/people/people_1.png" alt="People Image 1">
+                        </div>
+                        <p class="text-md">Benarrr helped us boosting our clients prospective to get more high quality projects ever.</p>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-lg font-bold">Sammy</h3>
+                            <p class="text-sm text-gray">CMO, Akuna Pixela Team</p>
+                        </div>
+                    </article>
+                    <article
+                        class="col-span-full md:col-span-4 flex flex-col justify-between bg-white h-[350px] w-full p-[30px] rounded-md">
+                        <div class="rounded-[100%] size-[70px] overflow-hidden">
+                            <img class="object-cover" width="70" height="70" src="./assets/images/people/people_2.png" alt="People Image 2">
+                        </div>
+                        <p class="text-md">With great ecosystem Benarrr we were able secure top notch projects from companies</p>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-lg font-bold">Rama Jaya</h3>
+                            <p class="text-sm text-gray">CEO, Pastikelarboss</p>
+                        </div>
+                    </article>
+                    <article
+                        class="col-span-full md:col-span-4 flex flex-col justify-between bg-white h-[350px] w-full p-[30px] rounded-md">
+                        <div class="rounded-[100%] size-[70px] overflow-hidden">
+                            <img class="object-cover" width="70" height="70" src="./assets/images/people/people_3.png" alt="People Image 3">
+                        </div>
+                        <p class="text-md">Benarrr helped us boosting our clients prospective to get more high quality projects ever.</p>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-lg font-bold">Istimaidina</h3>
+                            <p class="text-sm text-gray">Marketing, Hujan Abadi</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container mx-auto border-t border-gray-100">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 py-[50px]">
+            <img src="./assets/logo/logo.svg" alt="Brand Application Logo benaar">
+            <p class="text-sm text-gray">
+                All rights reserved Benarrr by BuildWithAngga 2023
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html> 
